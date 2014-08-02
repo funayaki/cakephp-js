@@ -21,17 +21,17 @@ You can also clone the repository in the plugins folder:
 
 ```
 $ cd plugins
-$ git clone git@github.com:oldskool/cakephp-js.git CakephpJs
+$ git clone git@github.com:oldskool/cakephp-js.git CakeJs
 ```
 
 Once the plugin is in place, load it in your `src/Config/bootstrap.php` by adding this line:
 
 ```php
-Plugin::load('CakephpJs');
+Plugin::load('CakeJs');
 ```
 
 Now to use the Helper, simply load it in your Controller:
 
 ```php
-public $helpers = ['CakephpJs.Js'];
+public $helpers = ['CakeJs.Js'];
 ```
