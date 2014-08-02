@@ -1,5 +1,5 @@
 <?php
-namespace JsHelper\View\Helper;
+namespace CakeJs\View\Helper;
 /**
  * jQuery Engine Helper for JsHelper
  *
@@ -25,7 +25,7 @@ namespace JsHelper\View\Helper;
 
 use App\View\Helper\AppHelper;
 use Cake\Core\Configure;
-use JsHelper\View\Helper\JsBaseEngineHelper;
+use CakeJs\View\Helper\JsBaseEngineHelper;
 
 /**
  * jQuery Engine Helper for JsHelper
