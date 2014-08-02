@@ -1,5 +1,5 @@
 <?php
-namespace JsHelper\I18n;
+namespace CakeJs\I18n;
 /**
  * Multibyte handling methods.
  *

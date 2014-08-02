@@ -1,5 +1,5 @@
 <?php
-namespace JsHelper\View\Helper;
+namespace CakeJs\View\Helper;
 /**
  * Javascript Generator class file.
  *
@@ -22,9 +22,9 @@ use Cake\Core\Configure;
 use Cake\View\Helper\FormHelper;
 use Cake\View\Helper\HtmlHelper;
 use Cake\View\View;
-use JsHelper\View\Helper\JqueryEngineHelper;
-use JsHelper\View\Helper\JsBaseEngineHelper;
-use JsHelper\I18n\Multibyte;
+use CakeJs\View\Helper\JqueryEngineHelper;
+use CakeJs\View\Helper\JsBaseEngineHelper;
+use CakeJs\I18n\Multibyte;
 
 /**
  * Javascript Generator helper class for easy use of JavaScript.
