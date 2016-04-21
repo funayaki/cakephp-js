@@ -91,7 +91,7 @@ class JsHelper extends AppHelper
      */
     public function initialize(array $config = [])
     {
-        $className = 'JsHelper.Jquery';
+        $className = 'CakeJs.Jquery';
         if (is_array($config) && isset($config[0])) {
             $className = $config[0];
         } elseif (is_string($config)) {
