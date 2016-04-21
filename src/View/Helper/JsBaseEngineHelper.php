@@ -43,7 +43,7 @@ abstract class JsBaseEngineHelper extends AppHelper
      *
      * @var array
      */
-    protected $_optionMap = array();
+    protected $_optionMap = [];
 
     /**
      * An array of lowercase method names in the Engine that are buffered unless otherwise disabled.
@@ -58,7 +58,7 @@ abstract class JsBaseEngineHelper extends AppHelper
      *
      * @var array
      */
-    protected $_callbackArguments = array();
+    protected $_callbackArguments = [];
 
     /**
      * Create an `alert()` message in JavaScript
@@ -133,7 +133,7 @@ abstract class JsBaseEngineHelper extends AppHelper
      * @param array $options Set of options, see above.
      * @return string A JSON code block
      */
-    public function object($data = array(), $options = array())
+    public function object($data = [], $options = [])
     {
         $defaultOptions = [
             'prefix' => '', 'postfix' => '',

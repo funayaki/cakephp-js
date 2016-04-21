@@ -134,7 +134,7 @@ class JqueryEngineHelper extends JsBaseEngineHelper
      * @param array $extraSafeKeys Extra safe keys
      * @return string Composed method string
      */
-    protected function _methodTemplate($method, $template, $options, $extraSafeKeys = array())
+    protected function _methodTemplate($method, $template, $options, $extraSafeKeys = [])
     {
         $options = $this->_mapOptions($method, $options);
         $options = $this->_prepareCallbacks($method, $options);
@@ -175,7 +175,7 @@ class JqueryEngineHelper extends JsBaseEngineHelper
      * @param array $options Options for the event.
      * @return string completed event handler
      */
-    public function event($type, $callback, $options = array())
+    public function event($type, $callback, $options = [])
     {
         $defaults = ['wrap' => true, 'stop' => true];
         $options += $defaults;
@@ -225,10 +225,10 @@ class JqueryEngineHelper extends JsBaseEngineHelper
      * @return string completed string with effect.
      * @see JsBaseEngineHelper::effect()
      */
-    public function effect($name, $options = array())
+    public function effect($name, $options = [])
     {
         $speed = null;
-        if (isset($options['speed']) && in_array($options['speed'], array('fast', 'slow'))) {
+        if (isset($options['speed']) && in_array($options['speed'], ['fast', 'slow'])) {
             $speed = $this->value($options['speed']);
         }
         $effect = '';
@@ -258,7 +258,7 @@ class JqueryEngineHelper extends JsBaseEngineHelper
      * @return string The completed ajax call.
      * @see JsBaseEngineHelper::request() for options list.
      */
-    public function request($url, $options = array())
+    public function request($url, $options = [])
     {
         $url = html_entity_decode($this->url($url), ENT_COMPAT, Configure::read('App.encoding'));
         $options = $this->_mapOptions('request', $options);
@@ -299,7 +299,7 @@ class JqueryEngineHelper extends JsBaseEngineHelper
      * @return string Completed sortable script.
      * @see JsBaseEngineHelper::sortable() for options list.
      */
-    public function sortable($options = array())
+    public function sortable($options = [])
     {
         $template = '%s.sortable({%s});';
         return $this->_methodTemplate('sortable', $template, $options);
@@ -314,7 +314,7 @@ class JqueryEngineHelper extends JsBaseEngineHelper
      * @return string Completed Draggable script.
      * @see JsBaseEngineHelper::drag() for options list.
      */
-    public function drag($options = array())
+    public function drag($options = [])
     {
         $template = '%s.draggable({%s});';
         return $this->_methodTemplate('drag', $template, $options);
@@ -329,7 +329,7 @@ class JqueryEngineHelper extends JsBaseEngineHelper
      * @return string Completed Droppable script.
      * @see JsBaseEngineHelper::drop() for options list.
      */
-    public function drop($options = array())
+    public function drop($options = [])
     {
         $template = '%s.droppable({%s});';
         return $this->_methodTemplate('drop', $template, $options);
@@ -344,7 +344,7 @@ class JqueryEngineHelper extends JsBaseEngineHelper
      * @return string Completed Slider script.
      * @see JsBaseEngineHelper::slider() for options list.
      */
-    public function slider($options = array())
+    public function slider($options = [])
     {
         $callbacks = ['start', 'change', 'slide', 'stop'];
         $template = '%s.slider({%s});';
@@ -359,7 +359,7 @@ class JqueryEngineHelper extends JsBaseEngineHelper
      * @return string completed form serialization script.
      * @see JsBaseEngineHelper::serializeForm() for option list.
      */
-    public function serializeForm($options = array())
+    public function serializeForm($options = [])
     {
         $options += ['isForm' => false, 'inline' => false];
         $selector = $this->selection;
