@@ -17,6 +17,7 @@ namespace CakeJs\View\Helper;
  */
 
 use App\View\Helper\AppHelper;
+use Cake\Utility\Text;
 
 /**
  * JsEngineBaseClass
@@ -240,7 +241,7 @@ abstract class JsBaseEngineHelper extends AppHelper
                         break;
                     }
                     $charbits = $string{$i} . $string{$i + 1};
-                    $char = Multibyte::utf8($charbits);
+                    $char = Text::utf8($charbits);
                     $return .= sprintf('\u%04s', dechex($char[0]));
                     $i += 1;
                     break;
@@ -251,7 +252,7 @@ abstract class JsBaseEngineHelper extends AppHelper
                         break;
                     }
                     $charbits = $string{$i} . $string{$i + 1} . $string{$i + 2};
-                    $char = Multibyte::utf8($charbits);
+                    $char = Text::utf8($charbits);
                     $return .= sprintf('\u%04s', dechex($char[0]));
                     $i += 2;
                     break;
@@ -262,7 +263,7 @@ abstract class JsBaseEngineHelper extends AppHelper
                         break;
                     }
                     $charbits = $string{$i} . $string{$i + 1} . $string{$i + 2} . $string{$i + 3};
-                    $char = Multibyte::utf8($charbits);
+                    $char = Text::utf8($charbits);
                     $return .= sprintf('\u%04s', dechex($char[0]));
                     $i += 3;
                     break;
@@ -273,7 +274,7 @@ abstract class JsBaseEngineHelper extends AppHelper
                         break;
                     }
                     $charbits = $string{$i} . $string{$i + 1} . $string{$i + 2} . $string{$i + 3} . $string{$i + 4};
-                    $char = Multibyte::utf8($charbits);
+                    $char = Text::utf8($charbits);
                     $return .= sprintf('\u%04s', dechex($char[0]));
                     $i += 4;
                     break;
@@ -284,7 +285,7 @@ abstract class JsBaseEngineHelper extends AppHelper
                         break;
                     }
                     $charbits = $string{$i} . $string{$i + 1} . $string{$i + 2} . $string{$i + 3} . $string{$i + 4} . $string{$i + 5};
-                    $char = Multibyte::utf8($charbits);
+                    $char = Text::utf8($charbits);
                     $return .= sprintf('\u%04s', dechex($char[0]));
                     $i += 5;
                     break;

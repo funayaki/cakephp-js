@@ -25,7 +25,6 @@ use Cake\View\Helper\HtmlHelper;
 use Cake\View\View;
 use CakeJs\View\Helper\JqueryEngineHelper;
 use CakeJs\View\Helper\JsBaseEngineHelper;
-use CakeJs\I18n\Multibyte;
 
 /**
  * Javascript Generator helper class for easy use of JavaScript.
