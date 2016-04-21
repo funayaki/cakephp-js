@@ -86,16 +86,16 @@ class JsHelper extends AppHelper
 /**
  * Constructor - determines engine helper
  *
- * @param View $View the view object the helper is attached to.
- * @param string|array $settings Settings array contains name of engine helper.
+ * @param array $config The configuration settings provided to this helper.
+ * @return void
  */
-    public function __construct(View $View, $settings = [])
+    public function initialize(array $config = [])
     {
         $className = 'JsHelper.Jquery';
-        if (is_array($settings) && isset($settings[0])) {
-            $className = $settings[0];
-        } elseif (is_string($settings)) {
-            $className = $settings;
+        if (is_array($config) && isset($config[0])) {
+            $className = $config[0];
+        } elseif (is_string($config)) {
+            $className = $config;
         }
         $engineName = $className;
         list(, $className) = pluginSplit($className);
@@ -103,7 +103,8 @@ class JsHelper extends AppHelper
         $this->_engineName = $className . 'Engine';
         $engineClass = $engineName . 'Engine';
         $this->helpers[] = $engineClass;
-        parent::__construct($View, $settings);
+
+        $this->_helperMap = $this->_View->helpers()->normalizeArray($this->helpers);
     }
 
 /**
