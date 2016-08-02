@@ -24,7 +24,6 @@ namespace CakeJs\View\Helper;
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
 
-use App\View\Helper\AppHelper;
 use Cake\Core\Configure;
 use CakeJs\View\Helper\JsBaseEngineHelper;
 

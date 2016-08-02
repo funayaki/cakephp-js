@@ -16,7 +16,7 @@ namespace CakeJs\View\Helper;
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
 
-use App\View\Helper\AppHelper;
+use Cake\View\Helper;
 use Cake\Utility\Text;
 
 /**
@@ -26,7 +26,7 @@ use Cake\Utility\Text;
  *
  * @package       Cake.View.Helper
  */
-abstract class JsBaseEngineHelper extends AppHelper
+abstract class JsBaseEngineHelper extends Helper
 {
 
     /**

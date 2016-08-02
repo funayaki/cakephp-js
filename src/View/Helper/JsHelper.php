@@ -18,8 +18,8 @@ namespace CakeJs\View\Helper;
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
 
-use App\View\Helper\AppHelper;
 use Cake\Core\Configure;
+use Cake\View\Helper;
 use Cake\View\Helper\FormHelper;
 use Cake\View\Helper\HtmlHelper;
 use Cake\View\View;
@@ -36,7 +36,7 @@ use CakeJs\View\Helper\JsBaseEngineHelper;
  * @property      HtmlHelper $Html
  * @property      FormHelper $Form
  */
-class JsHelper extends AppHelper
+class JsHelper extends Helper
 {
 
     /**
