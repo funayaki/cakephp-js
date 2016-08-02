@@ -1,7 +1,7 @@
 {
 	"name": "oldskool/cakephp-js",
 	"type": "cakephp-plugin",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "JsHelper for CakePHP 3.x",
 	"homepage": "http://github.com/oldskool/cakephp-js",
 	"license": "MIT",
